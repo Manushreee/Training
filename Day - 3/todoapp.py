@@ -24,5 +24,3 @@ while True:
     else:
         print("Please enter the proper number or option: ")
        
- 
-has context menu
