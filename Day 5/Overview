@@ -1,1 +1,87 @@
+Introduction to Database
+
+A database is a structured collection of data stored electronically, allowing efficient data storage, retrieval, and management.
+
+Types of Databases
+
+1. Relational Databases (RDBMS)
+   -  Store data in tables with rows and columns, related through keys.
+   - Examples: MySQL, PostgreSQL.
+
+2. NoSQL Databases
+   -  Handle unstructured or semi-structured data, offering flexibility and horizontal scalability.
+   - Examples: MongoDB, Cassandra.
+
+3. In-Memory Databases
+   - Store data in RAM for extremely fast access.
+   - Examples: Redis, SAP HANA.
+
+4. Object-Oriented Databases
+   - Store data as objects, similar to object-oriented programming.
+   - Examples: db4o, ObjectDB.
+
+5. Graph Databases
+   - Use graph structures with nodes, edges, and properties to represent data.
+   - Examples: Neo4j, Amazon Neptune.
+
+6. Document-Oriented Databases
+   - Store data as documents, typically in JSON or BSON format.
+   - Examples: MongoDB, CouchDB.
+
+7. Key-Value Databases
+   - Store data as key-value pairs for simple and fast retrieval.
+   - Examples: Redis, DynamoDB.
+
+DBMS Architecture
+DBMS architecture is typically divided into three levels:
+1. External Level: User views of the database.
+2. Conceptual Level: Logical view of the entire database.
+3. Internal Level: Physical storage of data.
+
+Types of Models
+1. Hierarchical Model
+2. Network Model
+3. Relational Model
+4. Object-Oriented Model
+
+ER Model
+- Entity-Relationship (ER) Model: Uses entities, attributes, and relationships to represent data.
+- Components: Entities, Attributes, Relationships, ER Diagrams.
+
+Keys in DBMS
+- Primary Key: Unique identifier for records.
+- Foreign Key: Ensures referential integrity.
+- Composite Key: Multiple fields combined to form a unique identifier.
+- Candidate Key: A field or set of fields that can uniquely identify records.
+
+Normalization
+- Organize data to reduce redundancy.
+- Normal Forms: 1NF, 2NF, 3NF, BCNF, 4NF, 5NF.
+
+Basic Operations of Relational Algebra
+1. Select 
+2. Project 
+3. Union 
+4. Set Difference 
+5. Cartesian Product 
+6. Rename 
+
+SQL
+- Structured Query Language for managing databases.
+
+DDL, DML, DCL, DQL, TCL
+- DDL (Data Definition Language)**: CREATE, ALTER, DROP
+- DML (Data Manipulation Language)**: SELECT, INSERT, UPDATE, DELETE
+- DCL (Data Control Language)**: GRANT, REVOKE
+- DQL (Data Query Language)**: SELECT
+- TCL (Transaction Control Language)**: COMMIT, ROLLBACK, SAVEPOINT
+
+ Data Types in SQL
+ - INT, VARCHAR, DATE, BOOLEAN, FLOAT.
+
+ACID
+-  Atomicity, Consistency, Isolation, Durability.
+
+Stored Procedures
+- Definition: Precompiled SQL code stored in the database for reuse.
 
