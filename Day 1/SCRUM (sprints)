@@ -1,1 +1,43 @@
+Develop a Student Management Portal to streamline and enhance the management of student activities:
+
+SPRINT - 1: USER AUTHENTICATION AND HOME PAGE UI:
+
+GOAL:
+- Implement user authentication (login/signup)
+- Design and develop the home page UI.
+
+Objective:
+- User Authentication:
+  - Registration (username, email, password)
+  - User login
+  - Admin authentication
+  - Security by hashing the password in the database
+  - Password reset
+  - Redirect upon unsuccessful login
+  - Forgot password functionality
+  - Successful login redirection
+
+- Dashboard:
+  - User profile (name, ID/USN, branch)
+  - Landing page with user information
+  - Navigation bar (courses, attendance, logout)
+  - Dashboard login success
+
+Success Criteria:
+- Goal: Successful login and user navigation to the dashboard.
+
+Retrospective:
+- What went well: Dashboard login was successful.
+- Challenges:
+  - Number of users
+  - Multiple login attempts
+
+- Improvements:
+  - Add more interactive elements.
+  - Provide options for users to request account deletion.
+
+Success Rate:
+- Successful login to the dashboard
+- Easy navigation
+- User-friendly UI
 
