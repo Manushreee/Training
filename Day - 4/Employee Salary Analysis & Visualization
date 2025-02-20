@@ -58,6 +58,5 @@ print(above_average_salary_employees)
 
 //10. Sort Employees Based on Salary in Descending Order:
 
-python
 sorted_employees = df.sort_values(by='Salary', ascending=False)
 print(sorted_employees)
