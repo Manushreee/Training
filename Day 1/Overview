@@ -1,1 +1,396 @@
 
+Development Fundamentals
+-SDLC 
+-AGILE
+-GIT(Version control)
+
+
+	1. SDLC
+	 Key Phases of SDLC:
+	*planning and requirement analysis
+	*System Design 
+	*Implementation
+	*Testing
+	*Deployment 
+	*Maintenance and Support
+
+SDLC (Software Development Life Cycle)** is a process used by software engineers and developers to design, develop, and test high-quality software. The key phases of SDLC are:
+
+1. Planning and Requirement Analysis: 
+   * This is the first and most crucial phase where project goals, scope, risks, and requirements are defined. It involves gathering inputs from stakeholders and understanding what the end-users expect from the software.
+
+2. System Design:
+   * During this phase, the software's architecture and system designs are created. This includes both high-level design (HLD) for the overall system architecture and low-level design (LLD) for detailed functional specifications.
+
+3. Implementation:
+   * Also known as coding, this phase involves translating the design documents into actual code. Developers write code using suitable programming languages and tools to create the software components.
+
+4. Testing:
+   * Once the software is developed, it is rigorously tested to ensure it meets the specified requirements and is free of defects. This includes unit testing, integration testing, system testing, and acceptance testing.
+
+5. Deployment:
+   * After testing, the software is deployed to the production environment where it becomes available to end-users. This phase may also involve installation, configuration, and initial user training.
+
+6. Maintenance and Support:
+   * This final phase involves ongoing support to fix issues, update the software to accommodate new requirements, and ensure the software continues to function smoothly over time. Maintenance activities include bug fixes, performance improvements, and updating the software to stay compatible with new hardware and operating systems
+
+* Popular AGILE Frameworks:
+Scrum: A framework that uses fixed-length iterations called sprints and includes roles such as Product Owner, Scrum Master, and Development Team.
+
+Kanban: A visual workflow management method that focuses on continuous delivery and optimizing flow.
+
+Extreme Programming (XP): A methodology that emphasizes technical excellence and practices such as test-driven development (TDD) and pair programming.
+	
+* CRLF- Carriage Return Line Field
+* CORE VALUES OF AGILE MANIFESTO: Here are the four core values:
+
+Individuals and interactions over processes and tools
+
+Working software over comprehensive documentation
+
+Customer collaboration over contract negotiation
+
+Responding to change over following a plan
+	
+	* GIT CMDS:
+	
+	
+	1. git -v: Displays the current version of Git installed.
+	
+	2. mkdir project1: Creates a new directory named `project1`.
+	
+	3. cd project1: Changes the current working directory to `project1`.
+	
+	4. echo 'Hello from first Project' >file.txt: Creates a file named `file.txt` and writes the text "Hello from first Project" into it.
+	
+	5. ls: Lists all files in the current directory, which shows `file.txt`.
+	
+	6. cat file.txt: Displays the contents of `file.txt`, which shows "Hello from first Project".
+	
+	7. git init: Initializes a new Git repository in the current directory.
+	
+	8. ls: Lists all files in the current directory again, showing `file.txt`.
+	
+	9. ls -a: Lists all files in the directory, including hidden files (shows `./`, `../`, `.git/`, and `file.txt`).
+	
+	10. git add file.txt: Stages `file.txt` to be committed to the repository. The warning indicates that line endings in the file will be converted.
+	
+	11. git status: Shows the status of the working directory and staging area. Indicates `file.txt` is staged for commit.
+	
+	12. echo 'Another file'>file2.txt: Creates another file named `file2.txt` and writes "Another file" into it.
+	
+	13. git status\: Shows the current status. Now it indicates `file2.txt` is untracked.
+	
+	14. **`git rm --cached file.txt`**: Removes `file.txt` from the staging area, making it untracked again.
+	
+	15. git status: Shows the current status. Both `file.txt` and `file2.txt` are now untracked.
+	
+	16. git add : Stages all untracked files in the directory, including `file.txt` and `file2.txt`. The warnings indicate line endings will be converted.
+	
+	17. git status: Shows the current status, indicating both `file.txt` and `file2.txt` are staged for commit.
+	
+	18.git commit -m 'Feature X completed: Commits the staged files with the message "Feature X completed". Provides information about the commit.
+	
+	19. ls -l: Lists all files in the directory with detailed information (permissions, owner, size, modification date).
+	
+	20. git log:
+	   - This command shows the commit history in detail.
+	   - In your case, it shows:
+	     - Commit hash: `dc96c82d5c97c3754ead8f8d7354d9b6e5413442`
+	     - Branch: `(HEAD -> master)`
+	     - Author: `Manushree L <manushree.l@olamnet.com>`
+	     - Date: `Tue Feb 11 15:51:14 2025 +0530`
+	     - Commit message: `Feature X completed`
+	
+	21. git log --oneline:
+	   - This command provides a simplified and concise view of the commit history.
+	   - It shows each commit on one line with:
+	     - Shortened commit hash: `dc96c82`
+	     - Branch: `(HEAD -> master)`
+	     - Commit message: `Feature X completed`
+	
+	* GIT CONFIGURATION
+	
+	
+	Git configuration involves setting up parameters that control the behavior of your Git environment. You can configure these settings at different levels to customize Git's behavior for your specific needs. Here are the different types of Git configuration:
+	
+	1. System Configuration
+	- **Description**: Applies to all users and repositories on the system. It is configured using the `git config --system` command and typically requires administrative rights to modify.
+	- **File Location**: Located in the Git installation directory (e.g., `/etc/gitconfig` on Unix systems or `C:\Program Files\Git\etc\gitconfig` on Windows).
+	  
+	 2. Global Configuration
+	- **Description**: Applies to all repositories for a single user. It is configured using the `git config --global` command.
+	- **File Location**: Located in the user's home directory (e.g., `~/.gitconfig` on Unix systems or `C:\Users\<username>\.gitconfig` on Windows).
+	
+	3. Local Configuration
+	- **Description**: Applies to a specific repository. It is configured using the `git config` command without any additional flags.
+	- **File Location**: Located in the `.git` directory of the repository (e.g., `project/.git/config`).
+	
+	* Common Configuration Settings
+	Here are some common Git configuration settings:
+	
+	- User Information:
+	  - Set the name and email address for commits:
+	  
+	    git config --global user.name "Your Name"
+	    git config --global user.email "your.email@example.com"
+	 
+	- Editor:
+	  - Set the default text editor for Git (e.g., Vim, Nano, VSCode):
+	    
+	    git config --global core.editor "code --wait"
+	
+	- Line Endings:
+	  - Configure how line endings are handled (important for cross-platform projects):
+	    
+	    git config --global core.autocrlf true   # Windows
+	    git config --global core.autocrlf input  # macOS/Linux
+	   
+	- Aliases:
+	  - Create shortcuts for commonly used Git commands:
+	    
+	    git config --global alias.st status
+	    git config --global alias.co checkout
+	    git config --global alias.br branch
+	* Viewing Configuration Settings
+	You can view your Git configuration settings at different levels using the following commands:
+	- **System**: `git config --system --list`
+	- **Global**: `git config --global --list`
+	- **Local**: `git config --list`
+	
+	### Example
+	Here's an example of setting up your Git configuration:
+	```sh
+	# Set global user information
+	git config --global user.name "John Doe"
+	git config --global user.email "john.doe@example.com"
+	
+	# Set global editor to VSCode
+	git config --global core.editor "code --wait"
+	
+	# Set global alias for status command
+	git config --global alias.st status
+	\
+	
+	GIT PUSH 
+	The `git push` command is used to upload local repository content to a remote repository. This command updates the remote branch with the changes you have made locally. Here's how you can use `git push`:
+
+### Basic Syntax
+
+git push [remote-name] [branch-name]
+
+Example
+If you have a remote named `origin` and you want to push changes to the `master` branch, you would use:
+
+git push origin master
+
+
+Step-by-Step Process
+1. **Add Changes to the Staging Area:**
+   
+   git add .
+  
+
+2. **Commit the Changes:**
+   ```sh
+   git commit -m "Your commit message"
+   ```
+
+3. **Push the Changes to the Remote Repository:**
+   ```sh
+   git push origin master
+   ```
+
+### Pushing to a Different Branch
+If you want to push to a different branch (e.g., `feature-branch`), you can specify the branch name:
+```sh
+git push origin feature-branch
+```
+
+### Force Push (Use with Caution)
+If you need to forcefully push changes (overwriting the remote branch), you can use:
+```sh
+git push --force origin master
+```
+Be careful with this command, as it can overwrite changes in the remote repository.
+
+### Push All Branches
+To push all branches at once, you can use:
+```sh
+git push --all origin
+```
+
+By using `git push`, you ensure that your local changes are reflected in the remote repository. If you have any more questions or need further details, feel free to ask!
+	
+	
+	ADDITIONAL CMDS:
+	
+	• $ git help
+	usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+	           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+	           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]
+	           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]
+	           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]
+	           <command> [<args>]
+	
+	These are common Git commands used in various situations:
+	
+	start a working area (see also: git help tutorial)
+	   clone      Clone a repository into a new directory
+	   init       Create an empty Git repository or reinitialize an existing one
+	
+	work on the current change (see also: git help everyday)
+	   add        Add file contents to the index
+	   mv         Move or rename a file, a directory, or a symlink
+	   restore    Restore working tree files
+	   rm         Remove files from the working tree and from the index
+	
+	examine the history and state (see also: git help revisions)
+	   bisect     Use binary search to find the commit that introduced a bug
+	   diff       Show changes between commits, commit and working tree, etc
+	   grep       Print lines matching a pattern
+	   log        Show commit logs
+	   show       Show various types of objects
+	   status     Show the working tree status
+	
+	grow, mark and tweak your common history
+	   backfill   Download missing objects in a partial clone
+	   branch     List, create, or delete branches
+	   commit     Record changes to the repository
+	   merge      Join two or more development histories together
+	   rebase     Reapply commits on top of another base tip
+	   reset      Reset current HEAD to the specified state
+	   switch     Switch branches
+	   tag        Create, list, delete or verify a tag object signed with GPG
+	
+	collaborate (see also: git help workflows)
+	   fetch      Download objects and refs from another repository
+	   pull       Fetch from and integrate with another repository or a local branch
+	   push       Update remote refs along with associated objects
+	
+	'git help -a' and 'git help -g' list available subcommands and some
+	concept guides. See 'git help <command>' or 'git help <concept>'
+	to read about a specific subcommand or concept.
+	See 'git help git' for an overview of the system.
+	
+	• Help Commands
+	Git Help Commands
+	Help commands here.
+	 
+	Lecture Command Listing
+	
+	2. git help
+	3. git help config
+	 
+	Command Reference
+	Getting general help:
+	
+	4. git help
+	Help Command Syntax -- getting help about a specific Git command:
+	
+	5. git help command
+	
+	From <https://mindsprintlearning.udemy.com/course/git-going-fast/learn/lecture/1328104#overview> 
+	
+	
+	
+	### Current Directory (Present Working Directory)
+	
+	pwd
+	
+	
+	### Git Config (Global/User-level) Syntax
+	
+	git config --global setting value
+	
+	
+	### Configure User and Email
+	#### General Syntax:
+	
+	git config --global user.name "Your Name"
+	git config --global user.email "you@someplace.com"
+	
+	
+	#### Example using the course author's information:
+	
+	git config --global user.name "Jason Taylor"
+	git config --global user.email "jason@jasongtaylor.com"
+	
+	
+	### Listing All Global Configuration Settings
+	
+	git config --global --list
+	
+	
+	### Seeing Git's User-based Config File
+	cat ~/.gitconfig
+	
+	
+	• Starting Commands
+	Git Starting Commands
+	 
+	Lecture Command Listing - Fresh Start
+	pwd
+cd projects/
+git init git-demo
+	 
+	Lecture Command Listing - Start with Existing Project
+	pwd
+cd projects/
+cd website/
+ls
+git init
+	 
+	Command Reference
+	Present Workding Directory
+	pwd
+	Change Directory
+	cd folder-name
+	Git initialization
+	git init [project-name]
+	project-name parameter is optional. If not supplied, Git will initialize the current directory.
+	
+	From <https://mindsprintlearning.udemy.com/course/git-going-fast/learn/lecture/1328120#overview>
+	
+	
+	
+	• First Commit Commands
+	Git First Commit Commands
+	 
+	Lecture Command Listing
+	pwd
+ls
+mate README.md
+ls
+git status
+git add README.md
+git status
+git commit -m "Initial commit"
+clear
+git status
+	 
+	Command Reference
+	List
+	ls
+	Lists files and folders in current directory. Without parameters, will list non-hidden folders and files.
+	Git Status
+	git status
+	Shows which files have been modified in the working directory vs Git's staging area.
+	Git Add
+	git add file-name
+	Adds the new or newly modified file-name to Git's staging area (index).
+	Git Commit
+	git commit -m "A really good commit message"
+	Commits all files currently in Git's staging area. The -m parameter allows for a commit message directly from the command line.
+	Clear!
+	clear
+	Clears all previous commands from the terminal screen -- just a bit of clean up.
+	Text Mate
+	mate file-name
+	All command line demos are preformed on the MacOS. Creating and editing files is done with TextMate 2 (free) using the mate command from Terminal. Passing a file-name to the mate command will create or open that file. Windows users can use the notepad file-name command instead.
+	
+	From <https://mindsprintlearning.udemy.com/course/git-going-fast/learn/lecture/1352398#overview> 
+	
+	 
+	
+	
