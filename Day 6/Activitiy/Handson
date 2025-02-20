@@ -1,0 +1,16 @@
+// Importing required module
+const prompt = require('prompt-sync')();
+
+// Task 1: Create an array of strings and replace the values with corresponding uppercase values
+let strings = ["Mind", "SpRInT", "Pvt", "Ltd"];
+let upperCaseStrings = strings.map(str => str.toUpperCase());
+console.log("Uppercase Array:", upperCaseStrings); // Output: ["MIND", "SPRINT", "PVT", "LTD"]
+
+// Task 2: Write a program which takes input from the user in string and prints all values and their lengths
+const input = prompt('Enter names separated by commas: ');
+const names = input.split(',').map(name => name.trim());
+
+console.log("\nNames and Lengths:");
+names.forEach(name => {
+    console.log(`${name}: ${name.length}`);
+});
