@@ -1,0 +1,52 @@
+1. Create an array of numbers and write a logic to remove duplicate numbers from an array
+const numbers = [1, 2, 3, 4, 5, 3, 4, 6];
+const uniqueNumbers = [...new Set(numbers)];
+console.log(uniqueNumbers); // Output: [1, 2, 3, 4, 5, 6]
+2. Create a JS file to take numbers from the user and calculate the average of all numbers
+// script.js
+const prompt = require('prompt-sync')();
+
+const userInput = prompt('Enter numbers separated by commas: ');
+const numbers = userInput.split(',').map(Number);
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+const average = sum / numbers.length;
+console.log(`The average of the numbers is: ${average}`);
+3. Write a function that returns the largest number from an array
+javascript
+function largestNumber(arr) {
+    return Math.max(...arr);
+}
+
+const numbers = [1, 2, 3, 4, 5, 6];
+console.log(largestNumber(numbers)); // Output: 6
+4. Write a function that counts the number of vowels (a, e, i, o, u) in a given string
+javascript
+function countVowels(str) {
+    const vowels = 'aeiouAEIOU';
+    let count = 0;
+    for (let char of str) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+    return count;
+}
+
+const text = "Hello World";
+console.log(countVowels(text)); // Output: 3
+5. Write a function that finds duplicate elements in an array
+javascript
+function findDuplicates(arr) {
+    const duplicates = [];
+    const uniqueElements = new Set();
+    for (let num of arr) {
+        if (uniqueElements.has(num) && !duplicates.includes(num)) {
+            duplicates.push(num);
+        }
+        uniqueElements.add(num);
+    }
+    return duplicates;
+}
+
+const numbers = [1, 2, 3, 4, 5, 3, 4, 6];
+console.log(findDuplicates(numbers)); // Output: [3, 4]
