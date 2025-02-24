@@ -1,0 +1,42 @@
+Cloud Computing Overview
+Cloud computing is the delivery of various services over the Internet, including storage, computing power, databases, networking, software, and more.
+
+ Characteristics
+1. On-demand self-service: Users can access services whenever they need without human intervention.
+2. Broad network access: Services are available over the network and can be accessed through various devices.
+3. Resource pooling: Providers serve multiple customers with scalable resources that can be dynamically allocated.
+4. Rapid elasticity: Resources can be quickly scaled up or down based on demand.
+5. Measured service: Resource usage is monitored, controlled, and reported for transparency.
+
+Deployment Models
+1. Public Cloud: Services are delivered over the public Internet and shared across multiple organizations.
+2. Private Cloud: Services are maintained on a private network and used by a single organization.
+3. Hybrid Cloud: Combines public and private clouds, allowing data and applications to be shared between them.
+
+Service Models
+1. Infrastructure as a Service (IaaS): Provides virtualized computing resources over the Internet.
+2. Platform as a Service (PaaS): Provides hardware and software tools over the Internet.
+3. Software as a Service (SaaS): Delivers software applications over the Internet on a subscription basis.
+
+Amazon Web Services (AWS)
+AWS is a comprehensive and widely adopted cloud platform, offering over 200 fully featured services from data centers globally.
+
+Key Features of AWS
+1. Scalability: Easily scale resources up or down.
+2. Security: Robust security measures and compliance with various standards.
+3. Global Reach: Data centers around the world for better reach and redundancy.
+4. Cost-Effectiveness: Pay-as-you-go pricing.
+
+Benefits of Cloud Computing
+1. Cost Savings: Reduced capital expenses and operational costs.
+2. Flexibility: Access resources and services as needed.
+3. Speed: Quick deployment and faster time to market.
+4. Scalability: Adjust resources according to demand.
+5. Disaster Recovery: Improved data backup and recovery capabilities.
+
+Types of Cloud Computing
+1. Public Cloud: Open for use by the general public.
+2. Private Cloud: Exclusive use by a single organization.
+3. Hybrid Cloud: Combines public and private clouds.
+4. Multi-Cloud: Use of multiple cloud services from different providers.
+
